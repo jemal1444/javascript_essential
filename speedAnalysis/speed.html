@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Typing Tool</title>
+    <style>
+        #text-container {
+            margin-bottom: 20px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Typing Tool</h1>
+    <div id="text-container">
+        <p id="original-text">The quick brown fox jumps over the lazy dog.</p>
+        <textarea id="typed-text" rows="4" cols="50" placeholder="Type here..."></textarea>
+    </div>
+    <button onclick="calculateSpeed()">Calculate Speed</button>
+    <div id="result"></div>
+
+    <script>
+        function calculateSpeed() {
+            const originalText = document.getElementById("original-text").textContent.trim();
+            const typedText = document.getElementById("typed-text").value.trim();
+
+            const originalWords = originalText.split(" ");
+            const typedWords = typedText.split(" ");
+
+            const correctWords = originalWords.filter((word, index) => word === typedWords[index]).length;
+            const accuracy = (correctWords / originalWords.length) * 100;
+
+            const elapsedTimeInMinutes = 1; // Assuming 1 minute for typing
+            const typedWordCount = typedText.split(/\s+/).filter(word => word !== "").length;
+            const wpm = Math.round(typedWordCount / elapsedTimeInMinutes);
+
+            const resultElement = document.getElementById("result");
+            resultElement.innerHTML = `<p>Words per minute (WPM): ${wpm}</p>`;
+            resultElement.innerHTML += `<p>Accuracy: ${accuracy.toFixed(2)}%</p>`;
+        }
+    </script>
+</body>
+</html>
