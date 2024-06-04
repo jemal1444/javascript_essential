@@ -2,31 +2,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background:  url(./images/nejashi.jpg);
-    text-align: center;
-}
-  .footer { 
-        background-color: green; 
-        color: #fff; 
-        padding: 10px 0; 
-        text-align: center; 
-		position: fixed; 
-        bottom: 0; 
-        width: 100%; 
-    } 
-	
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
+    background-color: #f4f4f4;
     text-align: center;
 }
 
+nav {
+    background-color: #1B8B00;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    margin-right: auto;
+	
 }
 
 .logo {
@@ -35,12 +29,15 @@ header {
 }
 
 nav ul {
+	background-color: #1B8B00;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex: 1;
+	margin-left: 300px;
 }
 
 nav ul li {
@@ -89,47 +86,43 @@ main {
     padding: 20px;
 }
 
-#recommendations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+section {
+    margin: 20px 0;
 }
 
-.recommendation {
-    background-color: #fff;
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 22px);
+    max-width: 400px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
+    border-radius: 5px;
 }
 
-.recommendation img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.recommendation h2 {
-    font-size: 1.5em;
-    margin: 0;
-    padding: 10px;
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     background-color: #007BFF;
-    color: #fff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.recommendation p {
-    padding: 10px;
-    font-size: 1em;
-    color: #333;
+button[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
 footer {
-    background-color: #333;
+    background-color: #1B8B00;
     color: white;
-    padding: 10px 0;
+    padding: 4px 0;
     text-align: center;
 }

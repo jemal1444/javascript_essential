@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Recommendations</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Travel The World!</title>
+  
+  <link rel="stylesheet" href="./travel_recommendation.css">
+    
+
+     
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-			     
-                <li><a href="travel_recommendation.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-				<li><a href="book_now.html">Book Now</a></li>
-                <li>
-                    <form id="searchForm">
-                        <input type="text" id="searchInput" placeholder="Search...">
-                        <button type="button" id="searchButton">Search</button>
-                        <button type="button" id="resetButton">Reset</button>
-						
-                    </form>
-                </li>
-				  
-            </ul>
-        </nav>
-       
-    </header>
-    <div id="recommendations"></div>
+   <nav>
+    <div class="logo-container">
+            <img src="./images/logo1.jpg" alt="Travel Recommendations Logo" class="logo">
+        </div>
+        <h1>Travel The World</h1>
+        <ul>
+		
+            <li><a href="./travel_recommendation.html" id="home">Home </a></li>
+            <li><a href="./about.html" id="about">About Us </a></li>
+            <li><a href="./contact.html" id="contact">Contact Us </a></li>
+			<li><a href="book_now.html">Book Now</a></li>
+            <li id="searchWrapper">
+                <input type="text" id="searchInput" placeholder="Where do you want to go?">
+                <button id='btnSearch'>Search</button>
+                <button id='btnReset'>Reset</button>
+			
+            </li>
+        </ul>
+		
+    </nav>
+	 
     
-    <script src="travel_recommendation.js"></script>
-	 <footer class="footer"> 
-        <p>© 2024 NASO Travel Recommendations. All rights reserved.</p> 
-    </footer> 
+    <div class="container">
+        <div>
+            <h1 class="home">Travel The World</h1>
+            <div>
+                <p>
+                    This is a wonderfull Nejashi Mesjid located at Ethiopia, Visit Ethiopia
+					
+                </p>
+							
+            </div>
+		
+        </div>
+		
+        <div id="searchResults"></div>
+		 
+    </div>
+	
+<script src="./travel_recommendation.js"></script>
+<footer class="footer"> 
+        <p>© 2024 NASO Travel Recommendations.. All rights reserved.</p> 
+ </footer> 
 </body>
 </html>
